@@ -23,5 +23,12 @@ code: let newPizzaForm = new Orderform();
 
 Expected Output: Orderform {pizza: {...} }
 
-Describe: detailsPizza
+Describe: assignId() 
+
+Test: It will assign a unique ID number to each pizza.
+
+code:  newPizzaForm.assignId(test2Pizza);
+
+Expected Result: Pizza {toppings: 'mushroom', size: 'medium', id: 1}
+
 
