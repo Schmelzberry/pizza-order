@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Pizza Order</h1>
-    <h2>Create a pizza:</h2>
+    <h2>Select Size:</h2>
     <form id="new-pizza">
         <input type="radio" id="small" name="pizza_size" value="small">
         <label for ="small">Small</label><br>
@@ -19,6 +19,31 @@
         <label for ="lrg">Large</label><br>
         <button type ="submit">Select</button>
     </form>
-    
+    <h2>Select Toppings:</h2>
+    <form id="new-toppings">
+        <input type="checkbox" id="pizza_topping1" name="pizza_topping" value="pepperoni">
+        <label for ="pizza_topping1">Pepperoni</label><br>
+        <input type="checkbox" id="pizza_topping2" name="pizza_topping" value="sausage">
+        <label for ="pizza_topping2">Sausage</label><br>
+        <input type="checkbox" id="pizza_topping3" name="pizza_topping" value="mushroom">
+        <label for ="pizza_topping3">Mushroom</label><br>
+        <input type="checkbox" id="pizza_topping4" name="pizza_topping" value="onion">
+        <label for ="pizza_topping4">Onion</label><br>
+        <input type="checkbox" id="pizza_topping5" name="pizza_topping" value="olive">
+        <label for ="pizza_topping5">Olive</label><br>
+        <input type="checkbox" id="pizza_topping6" name="pizza_topping" value="pineapple">
+        <label for ="pizza_topping6">Pineapple</label><br>
+        <button type ="submit">Select</button>
+    </form>
+
+    <h2>Pizza Pricing:</h2>
+    <div id="thepizza">
+    </div>
+
+    <div id="pizza-info" class="hidden">
+        <P>Size:<span id="size-pizza"></span></P>
+        <p>Toppings:<span id ="toppings-pizza"></span></p>
+        <p><strong>Final Price:</strong><span id ="price-pizza"></span></p>
+    </div>
 </body>
 </html>
