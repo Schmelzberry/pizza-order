@@ -10,15 +10,15 @@
 <body>
     <h1>Pizza Order</h1>
     <h2>Select Size:</h2>
-    <form id="new-size">
-        <input type="radio" id="small" name="pizza_size" value="small">
-        <label for ="small">Small</label><br>
-        <input type="radio" id="med" name="pizza_size" value="med">
-        <label for ="med">Medium</label><br>
-        <input type="radio" id="lrg" name="pizza_size" value="lrg">
-        <label for ="lrg">Large</label><br>
-        <button type ="submit">Select</button>
+    <form>
+        <label for ="new-size"> Choose your pizza size:</label>
+        <select id ="new-size" name ="new-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
     </form>
+  
     <h2>Select Toppings:</h2>
     <form id="new-toppings">
         <input type="checkbox" id="pizza_topping1" name="pizza_topping" value="pepperoni">
