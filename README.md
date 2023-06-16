@@ -1,3 +1,34 @@
+# Pizza Order
+
+#### By Jake Elsberry
+
+#### A webpage to order pizzas based on the preferred size and toppings.
+
+## Technologies Used
+HTML,
+CSS,
+Javascript
+
+## Description
+
+This simple webpage is designed to order a pizza after the user enters their preferred toppings and size of pizza. 
+
+## Setup/Installation Requirements
+Open https://github.com/Schmelzberry/pizza-order.git in your browser.
+
+## Known Bugs
+No known issues
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 5/26/2023 Jake Elsberry - all rights reserved
+
+
+
+
+Tests
+
 Describe: function Pizza (toppings, size)
 
 Test: It will create a pizza object with two keys, price and toppings.
