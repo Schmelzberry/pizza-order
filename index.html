@@ -10,34 +10,33 @@
 <body>
     <h1>Pizza Order</h1>
     <h2>Select Size:</h2>
-    <form>
-        <label for ="new-size"> Choose your pizza size:</label>
-        <select id ="new-size" name ="new-size">
-            <option value="small">Small</option>
+        <form>
+            <label for ="size-select"> Choose your pizza size:</label>
+            <select id ="size-select" name ="size-select">
+             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
-        </select>
-    </form>
-  
+            </select>
+        </form>
     <h2>Select Toppings:</h2>
-    <form id="new-toppings">
-        <input type="checkbox" id="pizza_topping1" name="pizza_topping" value="pepperoni">
-        <label for ="pizza_topping1">Pepperoni</label><br>
-        <input type="checkbox" id="pizza_topping2" name="pizza_topping" value="sausage">
-        <label for ="pizza_topping2">Sausage</label><br>
-        <input type="checkbox" id="pizza_topping3" name="pizza_topping" value="mushroom">
-        <label for ="pizza_topping3">Mushroom</label><br>
-        <input type="checkbox" id="pizza_topping4" name="pizza_topping" value="onion">
-        <label for ="pizza_topping4">Onion</label><br>
-        <input type="checkbox" id="pizza_topping5" name="pizza_topping" value="olive">
-        <label for ="pizza_topping5">Olive</label><br>
-        <input type="checkbox" id="pizza_topping6" name="pizza_topping" value="pineapple">
-        <label for ="pizza_topping6">Pineapple</label><br>
-        <button type ="submit">Select</button>
-    </form>
-
-    <h2>Pizza Pricing:</h2>
-    <div id="thepizza">
+        <form id="toppings-select">
+            <input type="checkbox" id="pizza_topping1" name="pizza_topping" value="pepperoni">
+            <label for ="pizza_topping1">Pepperoni</label><br>
+            <input type="checkbox" id="pizza_topping2" name="pizza_topping" value="sausage">
+            <label for ="pizza_topping2">Sausage</label><br>
+            <input type="checkbox" id="pizza_topping3" name="pizza_topping" value="mushroom">
+            <label for ="pizza_topping3">Mushroom</label><br>
+            <input type="checkbox" id="pizza_topping4" name="pizza_topping" value="onion">
+            <label for ="pizza_topping4">Onion</label><br>
+            <input type="checkbox" id="pizza_topping5" name="pizza_topping" value="olive">
+            <label for ="pizza_topping5">Olive</label><br>
+            <input type="checkbox" id="pizza_topping6" name="pizza_topping" value="pineapple">
+            <label for ="pizza_topping6">Pineapple</label><br>
+            <button type ="submit">Select</button>
+        </form>
+    
+    <div id="thepizza" class="hidden">
+        <h2>Pizza Pricing:</h2>
     </div>
 
     <div id="pizza-info" class="hidden">

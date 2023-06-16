@@ -4,8 +4,6 @@ function Orderform() {
     this.currentId = 0;
 }
 
-// let test2Pizza = new Pizza("mushroom", "medium")
-
 // add pizza object to Orderform call w/ : newPizzaForm.addPizza(test2Pizza);
 Orderform.prototype.addPizza = function(pizza) {
     pizza.id = this.assignId();
@@ -31,26 +29,27 @@ Orderform.prototype.checkId = function(id) {
 function Pizza(toppings, size) {
     this.toppings = toppings;
     this.size = size;
+    this.price = calculatePrice(size)
 }
 // combines details of pizza into one string
 Pizza.prototype.detailsPizza = function () {
     return this.toppings + ", " + this.size;
 };
 
+function calculatePrice(size) {
+    switch(size) {
+        case ("small"):
+            return 12;
+    
+        case ("medium"):
+            return 15;
+    }
+}
+
 let test1Pizza = new Pizza("sausage", "small");
 console.log(test1Pizza.detailsPizza());
 
-
-
-
-// SAMPLE TEST CODE FOR CONSOLE
-// let newOrderForm = new Orderform();
-// let pizza1 = new Pizza ("ham", "small")
-// let pizza2 = new Pizza ("mushroom", "medium")
-// newOrderForm.addPizza(pizza1);
-// newOrderForm.addPizza(pizza2);
-
-// UI Logic --------
+// UI Logic -----------
 let PizzaForm = new Orderform();
 
 function handleFormSubmission(event) {
@@ -65,6 +64,13 @@ function handleFormSubmission(event) {
 }
 
 window.addEventListener("load", function () {
-    this.document.querySelector("form#new-size").addEventListener("submit", handleFormSubmission);
-    this.document.querySelector("form#new-toppings").addEventListener("submit", handleFormSubmission);
+    this.document.querySelector("form#size-select").addEventListener("submit", handleFormSubmission);
+    this.document.querySelector("form#toppings-select").addEventListener("submit", handleFormSubmission);
 });
+
+// SAMPLE TEST CODE FOR CONSOLE
+// let newOrderForm = new Orderform();
+// let pizza1 = new Pizza ("ham", "small")
+// let pizza2 = new Pizza ("mushroom", "medium")
+// newOrderForm.addPizza(pizza1);
+// newOrderForm.addPizza(pizza2);
