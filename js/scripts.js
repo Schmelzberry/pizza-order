@@ -5,9 +5,14 @@ function Pizza(toppings, size) {
     this.size = size;
 }
 
+Pizza.prototype.pricePizza = function () {
+    this.toppings = toppings;
+    this.size = size;
+    return toppings + " " + size;
+};
 
 let test1Pizza = new Pizza("sausage", "small");
-
+console.log(test1Pizza.pricePizza);
 
 //Business Logic for Orderform
 function Orderform() {
@@ -15,12 +20,7 @@ function Orderform() {
 }
 let newPizzaForm = new Orderform();
 
-Pizza.prototype.pricePizza = function () {
-    const toppingsCost = (this.toppings)
-    const sizePrice = (this.sizePrice)
-    return this.toppings + this.size;
+Orderform.prototype.addPizza = function(pizza) {
+    this.pizza[pizza.size] = pizza;
 };
 
-function calculateToppingsCost(toppings) {
-    let 
-}
