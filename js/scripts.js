@@ -51,14 +51,20 @@ console.log(test1Pizza.detailsPizza());
 // newOrderForm.addPizza(pizza2);
 
 // UI Logic --------
-let newPizzaForm = new Orderform();
+let PizzaForm = new Orderform();
 
 function handleFormSubmission(event) {
     event.preventDefault();
+    const inputtedSize = document.querySelector("input#new-size").value;
+    const inputtedToppings = document.querySelector("input#new-toppings").value;
+    let newPizza = new Pizza(inputtedSize, inputtedToppings);
+    PizzaForm.addPizza(newPizza);
+    console.log(PizzaForm.detailsPizza);
+
 
 }
 
 window.addEventListener("load", function () {
-    this.document.querySelector("form#new-pizza").addEventListener("submit", handleFormSubmission);
+    this.document.querySelector("form#new-size").addEventListener("submit", handleFormSubmission);
     this.document.querySelector("form#new-toppings").addEventListener("submit", handleFormSubmission);
 });
