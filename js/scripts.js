@@ -3,8 +3,8 @@ function Orderform() {
     this.pizzas = {};
     this.currentId = 0;
 }
-let newPizzaForm = new Orderform();
-let test2Pizza = new Pizza("mushroom", "medium")
+
+// let test2Pizza = new Pizza("mushroom", "medium")
 
 // add pizza object to Orderform call w/ : newPizzaForm.addPizza(test2Pizza);
 Orderform.prototype.addPizza = function(pizza) {
@@ -49,3 +49,16 @@ console.log(test1Pizza.detailsPizza());
 // let pizza2 = new Pizza ("mushroom", "medium")
 // newOrderForm.addPizza(pizza1);
 // newOrderForm.addPizza(pizza2);
+
+// UI Logic --------
+let newPizzaForm = new Orderform();
+
+function handleFormSubmission(event) {
+    event.preventDefault();
+
+}
+
+window.addEventListener("load", function () {
+    this.document.querySelector("form#new-pizza").addEventListener("submit", handleFormSubmission);
+    this.document.querySelector("form#new-toppings").addEventListener("submit", handleFormSubmission);
+});
